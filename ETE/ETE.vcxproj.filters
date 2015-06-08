@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MeasureManager">
+      <UniqueIdentifier>{6ed4a8f3-8e73-4a3b-9247-6c34345cbe9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SerialDev">
+      <UniqueIdentifier>{7713cfb8-290f-4df6-b373-312bea40a3b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FireCamera">
+      <UniqueIdentifier>{01a3c20e-3f7f-4262-9dd6-a04abd322311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PosController">
+      <UniqueIdentifier>{9f62f4ce-82c1-42fa-b9cc-f1de97561b9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ctrls">
+      <UniqueIdentifier>{d4e5c802-fe19-47f7-a753-939e9e7eb70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Calculator">
+      <UniqueIdentifier>{6b28ba37-aeb3-4a0d-8ca4-9d61e80023da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Point Loader">
+      <UniqueIdentifier>{de1ccd50-5db6-4032-b9c8-6c1c1984d773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helper">
+      <UniqueIdentifier>{64f01dbc-cbf0-48ce-8599-e0da9b5a6f83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stereo">
+      <UniqueIdentifier>{887b0141-41bc-40ef-b432-a2f6b59e71e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Single Instance Class">
+      <UniqueIdentifier>{82710bf3-7349-4534-b029-4b62ff7425e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface Instance">
+      <UniqueIdentifier>{fe219aac-b288-4638-a66a-d3da02f141b5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\output_wnd.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\output_wnd_hc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\properties_wnd.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\properties_wnd_hc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\properties.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\properties_hc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\buttons.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\filelarge.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\filesmall.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\main.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\writelarge.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\writesmall.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ribbon.mfcribbon-ms">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ETE.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ETEDoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ETE.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar256.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\btn1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\btn1_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\radio_on.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\radio_of.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\radio_of32.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\radio_on32.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\splash.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\3.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\4.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\5.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\6.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\7.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\8.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\9.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="C:\Users\gys\Desktop\bg.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ETE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ETEDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ETEView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ETESystemPublicDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPosController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeasureManager.h">
+      <Filter>MeasureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MeasureModel.h">
+      <Filter>MeasureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="IMeasureModel.h">
+      <Filter>MeasureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\Ctrls\PictureCtrl.h">
+      <Filter>Source Files\Ctrls</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgImageShow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMeasureProgress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StereoView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlatView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgResult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Calculator.h">
+      <Filter>Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixUntity.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Stereo\GLCamera.h">
+      <Filter>Stereo</Filter>
+    </ClInclude>
+    <ClInclude Include="CPoint3D.h">
+      <Filter>Point Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Point3DLoader.h">
+      <Filter>Point Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="CvvImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMaxValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgHeightValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSlice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IMeasureCommand.h">
+      <Filter>Interface Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PSIModel.h">
+      <Filter>MeasureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="VSIModel.h">
+      <Filter>MeasureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfocalModel.h">
+      <Filter>MeasureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ObserverModel.h">
+      <Filter>MeasureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="HighResolutionModel.h">
+      <Filter>MeasureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ArmDev.h">
+      <Filter>Single Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="XMTDev.h">
+      <Filter>Single Instance Class</Filter>
+    </ClInclude>
+    <ClInclude Include="skytax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ETE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ETEDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ETEView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\CameraThread.cpp">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\CameraView.cpp">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Util.cpp">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\WorkThread.cpp">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\camera.cpp">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\clink.cpp">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\firebus.cpp">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\firenode.cpp">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\Win32\convert.c">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\Win32\osutil.c">
+      <Filter>Source Files\FireCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPosController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeasureManager.cpp">
+      <Filter>MeasureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MeasureModel.cpp">
+      <Filter>MeasureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\ComSerial\SerialPort.cpp">
+      <Filter>SerialDev</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\ComSerial\MSComm\mscomm.cpp">
+      <Filter>SerialDev</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\Ctrls\PictureCtrl.cpp">
+      <Filter>Source Files\Ctrls</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgImageShow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMeasureProgress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StereoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlatView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgResult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Calculator.cpp">
+      <Filter>Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixUntity.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Stereo\GLCamera.cpp">
+      <Filter>Stereo</Filter>
+    </ClCompile>
+    <ClCompile Include="CPoint3D.cpp">
+      <Filter>Point Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Point3DLoader.cpp">
+      <Filter>Point Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\PosController\PosController.cpp">
+      <Filter>Single Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="CvvImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMaxValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHeightValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSlice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IMeasureCommand.cpp">
+      <Filter>Interface Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="PSIModel.cpp">
+      <Filter>MeasureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="VSIModel.cpp">
+      <Filter>MeasureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfocalModel.cpp">
+      <Filter>MeasureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObserverModel.cpp">
+      <Filter>MeasureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="HighResolutionModel.cpp">
+      <Filter>MeasureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ArmDev.cpp">
+      <Filter>Single Instance Class</Filter>
+    </ClCompile>
+    <ClCompile Include="XMTDev.cpp">
+      <Filter>Single Instance Class</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ETE.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FCE68DB7-5403-4EF1-96F5-DB6C42153877}</ProjectGuid>
+    <RootNamespace>ETE</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\Include;..\geometry\include;..\math_algorithm\include;C:\Program Files\MATLAB\MATLAB Compiler Runtime\v81\extern\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\MATLAB\MATLAB Compiler Runtime\v81\extern\lib\win32\microsoft;$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\Include;..\geometry\include;..\math_algorithm\include;F:\opencv\build\include\opencv2;F:\opencv\build\include\opencv;F:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Libraries\freeimage;$(ProjectDir)Libraries\PosController;$(ProjectDir)Libraries\Ctrls;$(ProjectDir)Libraries\FireCamera\Lib;$(ProjectDir)Libraries\FireCamera\Classes\Win32;$(ProjectDir)Libraries\FireCamera\;$(ProjectDir)Libraries\FireCamera\Classes;$(ProjectDir)Libraries\ComSerial;$(ProjectDir)Libraries\ComSerial\MSComm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DisableSpecificWarnings>4005;4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Libraries\freeimage\Lib;$(ProjectDir)Libraries\poscontroller\Lib;$(ProjectDir)Libraries\boost\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Geometry.lib;Math_Algorithm.lib;opencv_calib3d249d.lib;opencv_contrib249d.lib;opencv_core249d.lib;opencv_features2d249d.lib;opencv_flann249d.lib;opencv_gpu249d.lib;opencv_highgui249d.lib;opencv_imgproc249d.lib;opencv_legacy249d.lib;opencv_ml249d.lib;opencv_objdetect249d.lib;opencv_ts249d.lib;opencv_video249d.lib;opencv_nonfree249d.lib;opencv_ocl249d.lib;opencv_photo249d.lib;opencv_stitching249d.lib;opencv_superres249d.lib;opencv_videostab249d.lib;Dmc1380.lib;freeimage.lib;version.lib;mclmcrrt.lib;libmx.lib;libmat.lib;mclmcr.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>copy $(OutDir)psicalcdll.lib $(ProjectDir)
+copy "$(OutDir)Geometry.lib" $(SolutionDir)$(ProjectName)
+copy "$(OutDir)Math_Algorithm.lib" $(SolutionDir)$(ProjectName)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Libraries\freeimage;$(ProjectDir)Libraries\PosController;$(ProjectDir)Libraries\Ctrls;$(ProjectDir)Libraries\FireCamera\Lib;$(ProjectDir)Libraries\FireCamera\Classes\Win32;$(ProjectDir)Libraries\FireCamera\;$(ProjectDir)Libraries\FireCamera\Classes;$(ProjectDir)Libraries\ComSerial;$(ProjectDir)Libraries\ComSerial\MSComm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005;4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Libraries\freeimage\Lib;$(ProjectDir)Libraries\poscontroller\Lib;$(ProjectDir)Libraries\boost\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>Geometry.lib;Math_Algorithm.lib;opencv_calib3d249.lib;opencv_contrib249.lib;opencv_core249.lib;opencv_features2d249.lib;opencv_flann249.lib;opencv_gpu249.lib;opencv_highgui249.lib;opencv_imgproc249.lib;opencv_legacy249.lib;opencv_ml249d.lib;opencv_objdetect249.lib;opencv_ts249.lib;opencv_video249.lib;opencv_nonfree249.lib;opencv_ocl249.lib;opencv_photo249.lib;opencv_stitching249.lib;opencv_superres249.lib;opencv_videostab249.lib;Dmc1380.lib;freeimage.lib;version.lib;mclmcrrt.lib;libmx.lib;libmat.lib;mclmcr.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>copy $(OutDir)psicalcdll.lib $(ProjectDir)
+copy "$(OutDir)Geometry.lib" $(SolutionDir)$(ProjectName)
+copy "$(OutDir)Math_Algorithm.lib" $(SolutionDir)$(ProjectName)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="C:\Users\gys\Desktop\bg.bmp" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\1.bmp" />
+    <None Include="res\2.bmp" />
+    <None Include="res\3.bmp" />
+    <None Include="res\4.bmp" />
+    <None Include="res\5.bmp" />
+    <None Include="res\6.bmp" />
+    <None Include="res\7.bmp" />
+    <None Include="res\8.bmp" />
+    <None Include="res\9.bmp" />
+    <None Include="res\btn1.bmp" />
+    <None Include="res\btn1_hot.bmp" />
+    <None Include="res\buttons.bmp" />
+    <None Include="res\ETE.ico" />
+    <None Include="res\ETE.rc2" />
+    <None Include="res\ETEDoc.ico" />
+    <None Include="res\filelarge.bmp" />
+    <None Include="res\filesmall.bmp" />
+    <None Include="res\main.bmp" />
+    <None Include="res\output_wnd.ico" />
+    <None Include="res\output_wnd_hc.ico" />
+    <None Include="res\properties.bmp" />
+    <None Include="res\properties_hc.bmp" />
+    <None Include="res\properties_wnd.ico" />
+    <None Include="res\properties_wnd_hc.ico" />
+    <None Include="res\radio_of.bmp" />
+    <None Include="Res\radio_of32.bmp" />
+    <None Include="res\radio_on.bmp" />
+    <None Include="Res\radio_on32.bmp" />
+    <None Include="res\ribbon.mfcribbon-ms" />
+    <None Include="res\splash.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="res\writelarge.bmp" />
+    <None Include="res\writesmall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArmDev.h" />
+    <ClInclude Include="Calculator.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CommonFunc.h" />
+    <ClInclude Include="ConfocalModel.h" />
+    <ClInclude Include="CPoint3D.h" />
+    <ClInclude Include="CvvImage.h" />
+    <ClInclude Include="DlgMaxValue.h" />
+    <ClInclude Include="DlgMeasureProgress.h" />
+    <ClInclude Include="DlgHeightValue.h" />
+    <ClInclude Include="DlgPosController.h" />
+    <ClInclude Include="DlgResult.h" />
+    <ClInclude Include="DlgSlice.h" />
+    <ClInclude Include="ETE.h" />
+    <ClInclude Include="ETEDoc.h" />
+    <ClInclude Include="ETESystemPublicDefine.h" />
+    <ClInclude Include="ETEView.h" />
+    <ClInclude Include="FlatView.h" />
+    <ClInclude Include="HighResolutionModel.h" />
+    <ClInclude Include="DlgImageShow.h" />
+    <ClInclude Include="IMeasureCommand.h" />
+    <ClInclude Include="IMeasureModel.h" />
+    <ClInclude Include="Libraries\Ctrls\PictureCtrl.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MatrixUntity.h" />
+    <ClInclude Include="MeasureManager.h" />
+    <ClInclude Include="MeasureModel.h" />
+    <ClInclude Include="ObserverModel.h" />
+    <ClInclude Include="Point3DLoader.h" />
+    <ClInclude Include="PSIModel.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="skytax.h" />
+    <ClInclude Include="SplashWindow.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StereoView.h" />
+    <ClInclude Include="Stereo\GLCamera.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="VSIModel.h" />
+    <ClInclude Include="XMTDev.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ArmDev.cpp" />
+    <ClCompile Include="Calculator.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ConfocalModel.cpp" />
+    <ClCompile Include="CPoint3D.cpp" />
+    <ClCompile Include="CvvImage.cpp" />
+    <ClCompile Include="DlgMaxValue.cpp" />
+    <ClCompile Include="DlgMeasureProgress.cpp" />
+    <ClCompile Include="DlgHeightValue.cpp" />
+    <ClCompile Include="DlgPosController.cpp" />
+    <ClCompile Include="DlgResult.cpp" />
+    <ClCompile Include="DlgSlice.cpp" />
+    <ClCompile Include="ETE.cpp" />
+    <ClCompile Include="ETEDoc.cpp" />
+    <ClCompile Include="ETEView.cpp" />
+    <ClCompile Include="FlatView.cpp" />
+    <ClCompile Include="HighResolutionModel.cpp" />
+    <ClCompile Include="DlgImageShow.cpp" />
+    <ClCompile Include="IMeasureCommand.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\ComSerial\MSComm\mscomm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\ComSerial\SerialPort.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\Ctrls\PictureCtrl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\CameraThread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\CameraView.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\camera.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\clink.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\firebus.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\firenode.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\Win32\convert.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Classes\Win32\osutil.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\Util.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\FireCamera\WorkThread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Libraries\PosController\PosController.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MatrixUntity.cpp" />
+    <ClCompile Include="MeasureManager.cpp" />
+    <ClCompile Include="MeasureModel.cpp" />
+    <ClCompile Include="ObserverModel.cpp" />
+    <ClCompile Include="Point3DLoader.cpp" />
+    <ClCompile Include="PSIModel.cpp" />
+    <ClCompile Include="SplashWindow.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StereoView.cpp" />
+    <ClCompile Include="Stereo\GLCamera.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VSIModel.cpp" />
+    <ClCompile Include="XMTDev.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ETE.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ETE.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

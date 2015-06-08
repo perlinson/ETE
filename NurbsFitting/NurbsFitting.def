@@ -1,0 +1,6 @@
+; NurbsFitting.def : Declares the module parameters for the DLL.
+
+LIBRARY      "NurbsFitting"
+
+EXPORTS
+    ; Explicit exports can go here
